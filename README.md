@@ -1,8 +1,20 @@
-# React + Vite
+Hi 👋,
+Welcome to the React Snake Game repository! This is a fun and interactive Snake game built using ReactJS. Play as long as you can and watch your snake grow with it as well your score!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features:
+1. Very basic setup helps to understand the game easily for a player.
+2. Easy on eye colors to play as long as one wish to or can do.
+3. Score display just above the board to easily check the score achieved by the user.
 
-Currently, two official plugins are available:
+This project has been developed with the use of <b>ReactJS library</b> and <b>Vite</b>.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### React Snake Game App Screenshot
+
+<table>
+  <tr>
+     <td>Game start page</td>
+  </tr>
+  <tr>
+    <td><img src="" width=465 height=400></td>
+  </tr>
+ </table>
