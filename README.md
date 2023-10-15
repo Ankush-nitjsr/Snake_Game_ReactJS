@@ -15,6 +15,6 @@ This project has been developed with the use of <b>ReactJS library</b> and <b>Vi
      <td>Game start page</td>
   </tr>
   <tr>
-    <td><img src="" width=465 height=400></td>
+    <td><img src="public/Snake_game.png" width=465 height=400></td>
   </tr>
  </table>
