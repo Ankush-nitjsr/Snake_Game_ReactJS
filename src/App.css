@@ -39,5 +39,9 @@ h1 {
 .score {
   margin: 0 29%;
   color: blueviolet;
+}
 
+.highestScore {
+  margin: 0 29%;
+  color: blue;
 }

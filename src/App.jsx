@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react'
-import './App.css'
+import { useState, useEffect, useCallback } from 'react';
+import './App.css';
 import Food from './Components/Food';
 import Snake from './Components/Snake';
 
@@ -11,20 +11,25 @@ function App() {
     let x = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
     let y = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
     return [x, y];
-  }
-  const [food, setFood] = useState(getRandomGrid)
-  const [direction, setDirection] = useState('RIGHT')
+  };
+  const [food, setFood] = useState(getRandomGrid);
+  const [direction, setDirection] = useState('RIGHT');
   const [snakeDots, setSnakeDots] = useState([
     [0,0],
     [2,0],
-  ])
+  ]);
 
-  const [speed] = useState(200)
-  const [reset, setReset] = useState(true)
-  const [pause, setPause] = useState(true)
-
+  const [speed] = useState(200);
+  const [reset, setReset] = useState(true);
+  const [pause, setPause] = useState(true);
+  const [score, setScore] = useState(0);
+  const [highestScore, setHighestScore] = useState(score);
   const checkIfEat = () => {
     let head = snakeDots[snakeDots.length - 1]
+    setScore((snakeDots.length - 2) *10);
+    {if(score > highestScore) {
+      setHighestScore(score);
+    }}
     return head[0] === food[0] && head[1] === food[1]
   }
 
@@ -52,9 +57,13 @@ function App() {
       [0,0],
       [2,0],
     ])
-    setDirection(null)
-    setReset(false)
-    setPause(true)
+    setScore((snakeDots.length - 2) * 10);
+    {if(score > highestScore) {
+      setHighestScore(score);
+    }}
+    setDirection(null);
+    setReset(false);
+    setPause(true);
   }
   useEffect(() => {
     if(pause) return
@@ -124,7 +133,8 @@ function App() {
   return (
     <>
       <h1>Snake Game</h1>
-      <h2 className='score'>Score : {snakeDots.length - 2}</h2>
+      <h2 className='score'>Score : {score}</h2>
+      <h2 className='highestScore'>Highest Score : {highestScore}</h2>
       <div className='board'>
         <Snake snakeDots={snakeDots} />
         <Food dot={food}/>
