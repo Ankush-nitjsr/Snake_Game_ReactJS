@@ -13,8 +13,10 @@ This project has been developed with the use of <b>ReactJS library</b> and <b>Vi
 <table>
   <tr>
      <td>Game start page</td>
+    <td>Game page after play</td>
   </tr>
   <tr>
-    <td><img src="public/Snake_game.jpeg" width=465 height=400></td>
+    <td><img src="public/Game_page1.jpeg" width=465 height=400></td>
+    <td><img src="public/Game_page2.jpeg" width=465 height=400></td>
   </tr>
  </table>
